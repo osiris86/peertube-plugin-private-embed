@@ -1,7 +1,7 @@
 {
   "name": "peertube-plugin-private-embed",
   "description": "PeerTube plugin to privately embed videos",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "author": "osiris86",
   "bugs": "https://github.com/osiris86/peertube-plugin-private-embed/issues",
   "clientScripts": [
