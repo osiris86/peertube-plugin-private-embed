@@ -1,0 +1,8 @@
+{
+  "restrict-embedding-label": "Restrict embedding",
+  "restrict-embedding-domain-label": "Domain",
+  "restrict-embedding-domain-description": "Domain with protocol and trailing slash.",
+  "restrict-embedding-error-not-empty": "Domain must not be emtpy.",
+  "restrict-embedding-error-protocol": "Domain must start with https:// or http://.",
+  "restrict-embedding-error-slash": "Domain must end with trailing /."
+}

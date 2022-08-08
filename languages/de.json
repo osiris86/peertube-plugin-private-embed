@@ -1,0 +1,8 @@
+{
+  "restrict-embedding-label": "Einbetten einschränken",
+  "restrict-embedding-domain-label": "Domain",
+  "restrict-embedding-domain-description": "Domain inklusive Protokoll und abschließendem /",
+  "restrict-embedding-error-not-empty": "Domain darf nicht leer sein.",
+  "restrict-embedding-error-protocol": "Domain muss mit https:// oder http:// beginnen.",
+  "restrict-embedding-error-slash": "Domain muss mit einem / enden."
+}
