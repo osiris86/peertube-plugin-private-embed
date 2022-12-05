@@ -1,0 +1,8 @@
+{
+  "restrict-embedding-label": "Limiter l'intégration",
+  "restrict-embedding-domain-label": "Domaine",
+  "restrict-embedding-domain-description": "Le domaine avec le protocol et les slash finaux.",
+  "restrict-embedding-error-not-empty": "Le domaine ne peut pas être vide.",
+  "restrict-embedding-error-protocol": "Le domaine doir comment par https:// ou http://.",
+  "restrict-embedding-error-slash": "Le domaine doit se terminer avec /."
+}
