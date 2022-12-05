@@ -29,6 +29,7 @@
   "staticDirs": {},
   "translations": {
     "de": "./languages/de.json",
+    "fr": "./languages/fr.json",
     "en": "./languages/en.json"
   },
   "devDependencies": {
