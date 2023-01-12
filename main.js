@@ -26,7 +26,7 @@ async function register({
         return { allowed: true }
       }
 
-      const allowed = restrictEmbeddingDomain === referer
+      const allowed = restrictEmbeddingDomains.includes(referer.split(","))
 
       return {
         allowed: allowed,
