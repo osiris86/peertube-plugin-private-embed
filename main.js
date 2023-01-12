@@ -11,7 +11,7 @@ async function register({
   registerHook({
     target: 'filter:html.embed.video.allowed.result',
     handler: async (result, params) => {
-      const videoId = params.req.url.substring(1)
+      const videoId = params.req.url.split("?")[0].substring(1)
       const video = await videos.loadByIdOrUUID(videoId)
 
       const referer = params.req.headers.referer
