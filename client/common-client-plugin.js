@@ -61,34 +61,38 @@ async function register({ registerHook, peertubeHelpers, registerVideoField }) {
       if (!restrictEmbedding) {
         return { error: false }
       }
-      const currentValue = formValues.pluginData['restrict-embedding-domain']
-      if (!currentValue || currentValue.length === 0) {
-        const restrictEmbeddingErrorNotEmpty = await peertubeHelpers.translate(
-          'restrict-embedding-error-not-empty'
-        )
-        return {
-          error: true,
-          text: restrictEmbeddingErrorNotEmpty
+      
+      const currentValues = formValues.pluginData['restrict-embedding-domain'].split(",")
+      for(let i=0; i< currentValues.length; i++){
+      let currentValue = currentValues[i]
+        if (!currentValue || currentValue.length === 0) {
+          const restrictEmbeddingErrorNotEmpty = await peertubeHelpers.translate(
+            'restrict-embedding-error-not-empty'
+          )
+          return {
+            error: true,
+            text: restrictEmbeddingErrorNotEmpty
+          }
         }
-      }
-      if (
-        currentValue.indexOf('https://') !== 0 &&
-        currentValue.indexOf('http://') !== 0
-      ) {
-        const restrictEmbeddingErrorProtocol = await peertubeHelpers.translate(
-          'restrict-embedding-error-protocol'
-        )
-        return {
-          error: true,
-          text: restrictEmbeddingErrorProtocol
+        if (
+          currentValue.indexOf('https://') !== 0 &&
+          currentValue.indexOf('http://') !== 0
+        ) {
+          const restrictEmbeddingErrorProtocol = await peertubeHelpers.translate(
+            'restrict-embedding-error-protocol'
+          )
+          return {
+            error: true,
+            text: restrictEmbeddingErrorProtocol
+          }
         }
-      }
 
-      if (currentValue.substring(currentValue.length - 1) !== '/') {
-        const restrictEmbeddingErrorSlash = await peertubeHelpers.translate(
-          'restrict-embedding-error-slash'
-        )
-        return { error: true, text: restrictEmbeddingErrorSlash }
+        if (currentValue.substring(currentValue.length - 1) !== '/') {
+          const restrictEmbeddingErrorSlash = await peertubeHelpers.translate(
+            'restrict-embedding-error-slash'
+          )
+          return { error: true, text: restrictEmbeddingErrorSlash }
+        }
       }
     }
   }
